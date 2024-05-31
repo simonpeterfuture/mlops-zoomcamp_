@@ -77,7 +77,7 @@ def run_register_model(data_path: str, top_n: int):
 
     # Register the best model
     print(f"runs:/{best_run.info.run_id}/model")
-    mlflow.register_model(f"runs:/{best_run.info.run_id}/model")
+    mlflow.register_model(f"runs:/{best_run.info.run_id}/model",name='best-model')
 
 
 if __name__ == '__main__':
