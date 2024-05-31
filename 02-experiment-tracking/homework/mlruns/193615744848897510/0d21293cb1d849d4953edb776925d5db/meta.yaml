@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/mlops-zoomcamp_/02-experiment-tracking/homework/mlruns/193615744848897510/0d21293cb1d849d4953edb776925d5db/artifacts
+end_time: 1717139329396
+entry_point_name: ''
+experiment_id: '193615744848897510'
+lifecycle_stage: active
+run_id: 0d21293cb1d849d4953edb776925d5db
+run_name: awesome-grouse-938
+run_uuid: 0d21293cb1d849d4953edb776925d5db
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717139321810
+status: 3
+tags: []
+user_id: codespace
