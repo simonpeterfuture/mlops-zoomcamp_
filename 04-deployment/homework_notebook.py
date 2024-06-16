@@ -1,6 +1,6 @@
 import pickle
 import pandas as pd
-
+import sys 
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
@@ -38,8 +38,8 @@ y_pred = model.predict(X_val)
 
 
 
-year=2023
-month=3
+year=int(sys.argv[1])
+month=int(sys.argv[2])
 df['ride_id'] = f'{year:04d}/{month:02d}_' + df.index.astype('str')
 
 
@@ -47,10 +47,11 @@ df_resuts=pd.DataFrame()
 df_resuts['ride_id']=df['ride_id']
 df_resuts['predicted_duration']=y_pred
 df_resuts.head()
+print(df_resuts['predicted_duration'].mean())
 
 
 
-output_file='results.parquet'
+output_file=f'{year}_{month}results.parquet'
 df_resuts.to_parquet(
     output_file,
     engine='pyarrow',
